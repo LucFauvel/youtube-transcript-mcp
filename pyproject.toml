@@ -1,0 +1,10 @@
+[project]
+name = "youtube-transcript-mcp"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server built with FastMCP that fetches YouTube video transcripts with pagination support for handling long videos."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.12.4",
+    "youtube-transcript-api>=1.2.2",
+]
