@@ -166,31 +166,28 @@ The server handles common errors gracefully:
 
 ## Tips for Long Videos
 
-1. Use `get_transcript_info` first to see total entries
-2. Calculate how many pages you need
-3. Process transcripts page by page for summarization
-4. Default page size of 50 works well for most LLM context windows
+1. Use `get_transcript_info` first to see total entries and duration
+3. Specify timestamps of interesting parts or chapters of the video
+4. Ask the LLM to space out and sample different timestamps within the video
 
 **Example workflow:**
 ```
 1. Get transcript info for [video URL]
-2. Get page 1 of transcript
-3. Summarize this page
-4. Get page 2 of transcript
-5. Summarize this page
-6. Continue until all pages processed
+2. Get the first 5 minutes of transcript
+3. Summarize the fist 5 minutes
+4. Get the last 10 minutes of the transcript and summarize it
 ```
 
 ## Getting the Code
 
-The complete main.py code is provided above. Save it as `main.py` in your project directory along with the `requirements.txt` file.
+The complete main.py code is provided above. Save it as `main.py` and the dependencies are in the pyproject.toml file.
 
 ## Project Structure
 
 ```
 youtube-transcript-mcp/
 ├── main.py          # Main FastMCP server implementation
-├── requirements.txt   # Python dependencies
+├── pyproject.toml   # UV project file
 └── README.md         # This file
 ```
 
