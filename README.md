@@ -62,6 +62,27 @@ Add this configuration:
 }
 ```
 
+**For VSCode**: run the **MCP: Open User Configuration** command and edit the mcp.json
+
+Add this configuration:
+
+```json
+{
+  "servers": {
+    "youtube-transcript": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/absolute/path/to/youtube-transcript-mcp",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}
+```
+
 ## Available Tools
 
 ### 1. get_youtube_transcript
@@ -174,7 +195,7 @@ The server handles common errors gracefully:
 ```
 1. Get transcript info for [video URL]
 2. Get the first 5 minutes of transcript
-3. Summarize the fist 5 minutes
+3. Summarize the first 5 minutes
 4. Get the last 10 minutes of the transcript and summarize it
 ```
 
